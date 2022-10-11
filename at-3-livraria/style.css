@@ -1,0 +1,30 @@
+p.abstract {
+  display: -webkit-box;
+  /* -webkit-line-clamp: 3; */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: justify;
+  font-size: xx-small;
+}
+/* 
+body {
+  min-width: 372px;
+  padding: 0px 10px 0px 10px;
+} */
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.left, .right {
+	flex: 50%;
+}
+.left img{
+	margin: 0 auto;
+}
+
+.abas{
+	padding-bottom: 20px;
+}

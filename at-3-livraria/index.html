@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap-5.2.1/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Livraria Abaporu</title>
+
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white border-bottom shadow-sm mb-3">
+		<!-- Barra de navegação -->
+		<div class="container">
+			<!-- Barra de navegação - elementos à esquerda -->
+			<a class="navbar-brand" href="#"><strong>Livraria Abaporu</strong></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="navbar-collapse collapse">
+				<ul class="navbar-nav flex-grow-1">
+					<li class="nav-item">
+						<a href="index.html" class="nav-link text-white">Produtos</a>
+					</li>
+					<li class="nav-item">
+						<a href="" class="nav-link text-white disabled" disabled><s>Lojas</s></a>
+					</li>
+				</ul>
+			</div>
+			<!-- Barra de navegação - elementos à direita -->
+			<div class="align-self-end">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a href="carrinho.html?#" class="nav-link text-white">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart3"
+								viewBox="0 0 16 16">
+								<path
+									d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+							</svg>
+						</a>
+					</li>
+					<p id="produtos"></p>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+    <main class="mb-5 pb-5">
+        <div class="row g-3">
+
+            <!-- Livro 1 -->
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch">
+                <div class="card text-center bg-dark text-light">
+                    <img src="img/livros/literatura/portuguesa/LP0001.jpg"
+                        alt="Representação da capa do livro \'Livro do desassossego\'" class="card-img-top">
+                    <div class="card-header">35,00</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Livro do Desassossego</h5>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Fernando Pessoa</div>
+                            <div class="panel-body">Companhia das Letras</div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <form class="d-block" onclick="goToCar">
+                            <input type="button" class="btn btn-danger" value="Ir para o carrinho" onclick="goToCar()"></input>
+                        </form>
+                        <small class="text-success">4 livros disponíveis</small>
+                    </div>
+                </div>
+            </div>
+					
+            <!-- Livro 2 -->
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch">
+                <div class="card text-center bg-dark text-light">
+                    <img src="img/livros/literatura/portuguesa/LP0002.jpg"
+                        alt="Representação da capa do livro Macunaíma" class="card-img-top">
+                    <div class="card-header">44,90</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Macunaíma: o herói sem nenhum caráter</h5>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Mário de Andrade</div>
+                            <div class="panel-body">Ática</div>
+												</div>
+                    <div class="card-footer">
+                        <div>
+                            <button class="btn btn-danger disabled" disabled>
+                                <small>Em falta</small>
+                            </button>
+                        </div>
+                        <small class="text-danger"><b>Produto esgotado</b></small>
+                    </div>
+                </div>
+            </div>
+								</div>
+
+            <!-- Livro 3 -->
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch">
+                <div class="card text-center bg-dark text-light">
+                    <img src="img/livros/literatura/portuguesa/LP0003.jpg"
+                        alt="Representação da capa do livro Estrela da Vida Inteira" class="card-img-top">
+                    <div class="card-header">44,90</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Estrela da Vida Inteira</h5>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Manuel Bandeira</div>
+                            <div class="panel-body">Nova Fronteira</div>
+                        </div>
+
+                        <p class="card-text truncate-3l">resumoooooooooooooooooooo lorem</p>
+                    </div>
+                    <div class="card-footer">
+                        <div>
+                            <button class="btn btn-danger disabled" disabled>
+                                <small>Em falta</small>
+                            </button>
+                        </div>
+                        <small class="text-danger"><b>Produto esgotado</b></small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Livro 4 -->
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch">
+                <div class="card text-center bg-dark text-light">
+                    <img src="img/livros/literatura/portuguesa/LP0004.jpg"
+                        alt="Representação da capa do livro 'Livro do desassossego'" class="card-img-top">
+                    <div class="card-header">33,60</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Estrela da Vida Inteira</h5>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Manuel Bandeira</div>
+                            <div class="panel-body">Nova Fronteira</div>
+                        </div>
+
+                        <p class="card-text truncate-3l">resumoooooooooooooooooooo lorem</p>
+                    </div>
+                    <div class="card-footer">
+                        <div>
+                            <button class="btn btn-danger disabled" disabled>
+                                <small>Em falta</small>
+                            </button>
+                        </div>
+                        <small class="text-danger"><b>Produto esgotado</b></small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Livro 5 -->
+					<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch">
+                <div class="card text-center bg-dark text-light">
+                    <img src="img/livros/literatura/internacional/LI0001.jpg"
+                        alt="Representação da capa do livro 'Livro do desassossego'" class="card-img-top">
+                    <div class="card-header">44,90</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Titulo do livro</h5>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">nome_Autor_do_livro</div>
+                            <div class="panel-body">editor_do_livro</div>
+                        </div>
+
+                        <p class="card-text truncate-3l">resumoooooooooooooooooooo lorem</p>
+                    </div>
+                    <div class="card-footer">
+                        <div>
+                            <button class="btn btn-danger disabled" disabled>
+                                <small>Em falta</small>
+                            </button>
+                        </div>
+                        <small class="text-danger"><b>Produto esgotado</b></small>
+                    </div>
+                </div>
+            </div>
+					
+            <!-- Livro 6 -->
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch">
+                <div class="card text-center bg-dark text-light">
+                    <img src="img/livros/ciencias/biologia/CB0001.jpg"
+                        alt="Representação da capa do livro 'Livro do desassossego'" class="card-img-top">
+                    <div class="card-header">44,90</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Titulo do livro</h5>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">nome_Autor_do_livro</div>
+                            <div class="panel-body">editor_do_livro</div>
+                        </div>
+
+                        <p class="card-text truncate-3l">resumoooooooooooooooooooo lorem</p>
+                    </div>
+                    <div class="card-footer">
+                        <div>
+                            <button class="btn btn-danger disabled" disabled>
+                                <small>Em falta</small>
+                            </button>
+                        </div>
+                        <small class="text-danger"><b>Produto esgotado</b></small>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Livro 7 -->
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch">
+                <div class="card text-center bg-dark text-light">
+                    <img src="img/livros/ciencias/biologia/CB0002.jpg"
+                        alt="Representação da capa do livro 'Livro do desassossego'" class="card-img-top">
+                    <div class="card-header">44,90</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Titulo do livro</h5>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">nome_Autor_do_livro</div>
+                            <div class="panel-body">editor_do_livro</div>
+                        </div>
+
+                        <p class="card-text truncate-3l">resumoooooooooooooooooooo lorem</p>
+                    </div>
+                    <div class="card-footer">
+                        <div>
+                            <button class="btn btn-danger disabled" disabled>
+                                <small>Em falta</small>
+                            </button>
+                        </div>
+                        <small class="text-danger"><b>Produto esgotado</b></small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Livro 8 -->
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch">
+                <div class="card text-center bg-dark text-light">
+                    <img src="img/livros/ciencias/biologia/CB0004.jpg"
+                        alt="Representação da capa do livro 'Livro do desassossego'" class="card-img-top">
+                    <div class="card-header">44,90</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Titulo do livro</h5>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">nome_Autor_do_livro</div>
+                            <div class="panel-body">editor_do_livro</div>
+                        </div>
+
+                        <p class="card-text truncate-3l">resumoooooooooooooooooooo lorem</p>
+                    </div>
+                    <div class="card-footer">
+                        <div>
+                            <button class="btn btn-danger disabled" disabled>
+                                <small>Em falta</small>
+                            </button>
+                        </div>
+                        <small class="text-danger"><b>Produto esgotado</b></small>
+                    </div>
+                </div>
+            </div>
+            
+
+            <!-- Livro 9 -->
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch">
+                <div class="card text-center bg-dark text-light">
+                    <img src="img/livros/ciencias/biologia/CB0005.jpg"
+                        alt="Representação da capa do livro 'Livro do desassossego'" class="card-img-top">
+                    <div class="card-header">44,90</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Titulo do livro</h5>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">nome_Autor_do_livro</div>
+                            <div class="panel-body">editor_do_livro</div>
+                        </div>
+
+                        <p class="card-text truncate-3l">resumoooooooooooooooooooo lorem</p>
+                    </div>
+                    <div class="card-footer">
+                        <div>
+                            <button class="btn btn-danger disabled" disabled>
+                                <small>Em falta</small>
+                            </button>
+                        </div>
+                        <small class="text-danger"><b>Produto esgotado</b></small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Livro 10 -->
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch">
+                <div class="card text-center bg-dark text-light">
+                    <img src="img/livros/ciencias/fisica/CF0001.jpg"
+                        alt="Representação da capa do livro 'Livro do desassossego'" class="card-img-top">
+                    <div class="card-header">44,90</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Titulo do livro</h5>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">nome_Autor_do_livro</div>
+                            <div class="panel-body">editor_do_livro</div>
+                        </div>
+
+                        <p class="card-text truncate-3l">resumoooooooooooooooooooo lorem</p>
+                    </div>
+                    <div class="card-footer">
+                        <div>
+                            <button class="btn btn-danger disabled" disabled>
+                                <small>Em falta</small>
+                            </button>
+                        </div>
+                        <small class="text-danger"><b>Produto esgotado</b></small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Livro 11 -->
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch">
+                <div class="card text-center bg-dark text-light">
+                    <img src="img/livros/ciencias/fisica/CF0002.jpg"
+                        alt="Representação da capa do livro 'Livro do desassossego'" class="card-img-top">
+                    <div class="card-header">44,90</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Titulo do livro</h5>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">nome_Autor_do_livro</div>
+                            <div class="panel-body">editor_do_livro</div>
+                        </div>
+
+                        <p class="card-text truncate-3l">resumoooooooooooooooooooo lorem</p>
+                    </div>
+                    <div class="card-footer">
+                        <div>
+                            <button class="btn btn-danger disabled" disabled>
+                                <small>Em falta</small>
+                            </button>
+                        </div>
+                        <small class="text-danger"><b>Produto esgotado</b></small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Livro 12 -->
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch">
+                <div class="card text-center bg-dark text-light">
+                    <img src="img/livros/ciencias/fisica/CF0003.jpg"
+                        alt="Representação da capa do livro 'Livro do desassossego'" class="card-img-top">
+                    <div class="card-header">44,90</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Titulo do livro</h5>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">nome_Autor_do_livro</div>
+                            <div class="panel-body">editor_do_livro</div>
+                        </div>
+
+                        <p class="card-text truncate-3l">resumoooooooooooooooooooo lorem</p>
+                    </div>
+                    <div class="card-footer">
+                        <div>
+                            <button class="btn btn-danger disabled" disabled>
+                                <small>Em falta</small>
+                            </button>
+                        </div>
+                        <small class="text-danger"><b>Produto esgotado</b></small>
+                    </div>
+                </div>
+            </div>
+					
+        </div>
+
+    </main>
+
+    <footer class="bg-dark text-center text-white">
+			<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+				© 2022 Copyright:
+				<a class="text-white" target="_blank" href="https://www.linkedin.com/in/brazadrian/">Gilmar Adrian</a>
+			</div>
+		</footer>
+
+    <script src="/bootstrap-5.2.1/dist/js/bootstrap.bundle.js"></script>
+		<script src="script.js"></script>
+
+</body>
+
+</html>

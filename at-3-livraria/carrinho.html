@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="bootstrap-5.2.1/dist/css/bootstrap.css" />
+	<link rel="stylesheet" href="style.css" />
+
+	<title>Livraria Abaporu</title>
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white border-bottom shadow-sm mb-3">
+		<!-- Barra de navegação -->
+		<div class="container">
+			<!-- Barra de navegação - elementos à esquerda -->
+			<a class="navbar-brand" href="#"><strong>Livraria Abaporu</strong></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="navbar-collapse collapse">
+				<ul class="navbar-nav flex-grow-1">
+					<li class="nav-item">
+						<a href="index.html" class="nav-link text-white">Produtos</a>
+					</li>
+					<li class="nav-item">
+						<a href="" class="nav-link text-white disabled" disabled><s>Lojas</s></a>
+					</li>
+				</ul>
+			</div>
+			<!-- Barra de navegação - elementos à direita -->
+			<div class="align-self-end">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a href="carrinho.html?#" class="nav-link text-white">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart3"
+								viewBox="0 0 16 16">
+								<path
+									d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+							</svg>
+						</a>
+					</li>
+					<p id="produtos"></p>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Produtos -->
+	<div class="container">
+		<div class="row">
+			<div class="left abas">
+				<div class="col-md-4">
+					<img src="img/livros/literatura/portuguesa/LP0001.jpg"
+						alt="Capa do livro com os dizeres Fernando Pessoa, Livro do Desassossego da Companhia das Letras, edição Companhia de Bolso">
+				</div>
+			</div>
+
+			<div class="right abas">
+				<h5 class="card-title"><strong>Livro do Desassossego</strong></h5>
+				<h6 class="">Fernando Pessoa</h6>
+				<p class="card-text abstract">O Livro do Desassossego é um relato de tudo que se vive e percebe-se com (e
+					talvez por muitas vezes sem) a consciência, deixando à mostra toda genialidade e angústias de Pessoa enquanto
+					um de seus mais de 70 heterônimos. “Porque eu não sou nada, eu posso imaginar-me a ser qualquer coisa.</p>
+				<p class="card-text"><small class="text-muted">R$ 35,00</small></p>
+				<div class="panel panel-default mb-4">
+					<div class="panel-body">
+						<form class="d-block">
+							<p>Temos 4 livros disponíveis. Quantos livros deseja levar?</p>
+							<br>
+							<select class="form-select form-select-sm" aria-label=".form-select-sm" aria-label="Default select"
+								id="quantidade" onChange="carConteudo()">
+								<option value="0">0</option>
+								<option value="1" selected>1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+							<br>
+							<div class="card">
+								<p>Total: R$ <var id="preco_total">35</var>,00</p>
+							</div>
+							<br>
+							<button class="btn btn-success" onClick="addProduto()">Adicionar ao carrinho</button>
+						</form>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="container">
+
+		<!-- Barra de navegação - Com vídeos, fotos e comentários -->
+		<nav class="abas">
+			<div class="nav nav-tabs" id="nav-tab" role="tablist">
+				<button class="nav-link active" id="nav-videos-tab" data-bs-toggle="tab" data-bs-target="#nav-videos"
+					type="button" role="tab" aria-controls="nav-videos" aria-selected="true">Vídeos</button>
+
+				<button class="nav-link" id="nav-fotos-tab" data-bs-toggle="tab" data-bs-target="#nav-fotos" type="button"
+					role="tab" aria-controls="nav-fotos" aria-selected="false">Fotos</button>
+
+				<button class="nav-link" id="nav-comentarios-tab" data-bs-toggle="tab" data-bs-target="#nav-comentarios"
+					type="button" role="tab" aria-controls="nav-comentarios" aria-selected="false">Comentários</button>
+			</div>
+		</nav>
+
+		<!-- Conteúdos da barra de navegação acima -->
+		<div class="tab-content abas" id="nav-tabContent">
+			<div class="tab-pane fade show active" id="nav-videos" role="tabpanel" aria-labelledby="nav-videos-tab"
+				tabindex="0">
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="card">
+							<div class="card-body">
+								<iframe width="100%" src="https://www.youtube.com/embed/pF46XeiZ2Ik"
+									title="Livro do Desassossego (Fernando Pessoa) | Tatiana Feltrin" frameborder="0"
+									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+									allowfullscreen></iframe>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-sm-6">
+						<div class="card">
+							<div class="card-body">
+								<iframe width="100%" src="https://www.youtube.com/embed/rPjvurm1I0M"
+									title="Livro do Desassossego, de Bernardo Soares (Fernando Pessoa) - resenha" frameborder="0"
+									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+									allowfullscreen></iframe>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="tab-pane fade" id="nav-fotos" role="tabpanel" aria-labelledby="nav-fotos-tab" tabindex="0">
+				<div class="row">
+					<div class="card col-sm-4">
+						<img src="img/livros/literatura/portuguesa/LPF001.jpg" class="card-img" alt="Imagens do livro" />
+					</div>
+
+					<div class="card col-sm-4">
+						<img src="img/livros/literatura/portuguesa/LPF002.jpg" class="card-img" alt="Imagens do livro" />
+					</div>
+
+					<div class="card col-sm-4">
+						<img src="img/livros/literatura/portuguesa/LPF003.jpg" class="card-img" alt="Imagens do livro" />
+					</div>
+				</div>
+			</div>
+
+			<div class=" tab-pane fade" id="nav-comentarios" role="tabpanel" aria-labelledby="nav-comentarios-tab"
+				tabindex="0">
+				<div class="row">
+
+					<!-- comentário 1 -->
+					<div class="col-sm-4">
+						<div class="card">
+							<div class="card-header">
+								Antonieta Pascoal
+							</div>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item">
+									Casamentiss faiz malandris se pirulitá.Posuere libero varius. Nullam a nisl ut ante blandit hendrerit.
+									Aenean sit amet nisi.Delegadis gente finis, bibendum egestas augue arcu ut est.Praesent malesuada urna
+									nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus.
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- comentário 2 -->
+					<div class="col-sm-4">
+						<div class="card">
+							<div class="card-header">
+								Antônio Gomes
+							</div>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item">
+									Quem num gosta di mé, boa gentis num é.Aenean aliquam molestie leo, vitae iaculis nisl.Quem num gosta
+									di
+									mim que vai caçá sua turmis!Copo furadis é disculpa de bebadis, arcu quam euismod magna.
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- comentário 3 -->
+					<div class="col-sm-4">
+						<div class="card">
+							<div class="card-header">
+								Carlos Bernardo
+							</div>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item">
+									Mussum Ipsum, cacilds vidis litro abertis. Mais vale um bebadis conhecidiss, que um alcoolatra
+									anonimis.Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e
+									fermentis.Interessantiss
+									quisso pudia ce receita de bolis, mais bolis eu num gostis.Diuretics paradis num copo é motivis de
+									denguis.
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer class="bg-dark text-center text-white">
+			<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+				© 2022 Copyright:
+				<a class="text-white" target="_blank" href="https://www.linkedin.com/in/brazadrian/">Gilmar Adrian</a>
+			</div>
+		</footer>
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+			crossorigin="anonymous"></script>
+
+		<script src="script.js"></script>
+
+</body>
+
+</html>
